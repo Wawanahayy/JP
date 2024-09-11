@@ -15,6 +15,7 @@ chmod +x cat20.sh
 sudo bash cat20.sh
 ```
 # install and create wallet save your pharse
+# save your pharse and send your token $FB to gas fee
 
 # after create wallet
 ```bash
