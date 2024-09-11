@@ -40,7 +40,6 @@ Build dan Jalankan Docker Container:
 cd ../../ && docker build -t tracker:latest .
 ```
 ```
-sudo docker build -t tracker:latest .
 sudo docker run -d \
     --name tracker \
     --add-host="host.docker.internal:host-gateway" \
