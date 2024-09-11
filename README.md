@@ -36,3 +36,8 @@ back to and run 3
 ```bash
 sudo bash cat20.sh
 ```
+
+create new session
+```bash
+screen -S cat20
+```
