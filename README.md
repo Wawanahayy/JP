@@ -74,3 +74,6 @@ sudo apt-get purge -y curl tar wget clang pkg-config libssl-dev jq build-essenti
 ```
 rm -f /path/to/your/cat20.sh
 ```
+
+credit by:
+https://github.com/nopapername/shell-oooooyoung/blob/main/shell-script/cat20-oooooyoung.sh
