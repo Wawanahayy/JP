@@ -37,6 +37,9 @@ sudo docker-compose up -d
 ```
 Build dan Jalankan Docker Container:
 ```bash
+cd ../../ && docker build -t tracker:latest .
+```
+```
 sudo docker build -t tracker:latest .
 sudo docker run -d \
     --name tracker \
