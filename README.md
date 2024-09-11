@@ -41,3 +41,40 @@ create new session
 ```bash
 screen -S cat20
 ```
+
+# deleted all or remove all
+
+```
+rm -rf ~/cat-token-box
+```
+```
+# Hapus container
+sudo docker rm -f tracker
+
+# Hapus image
+sudo docker rmi tracker:latest
+```
+```
+rm -f ~/cat-token-box/packages/cli/mint_script.sh
+rm -f ~/cat-token-box/packages/cli/config.json
+```
+```
+# Hapus Docker
+sudo apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli containerd.io
+
+# Hapus Docker Compose
+sudo rm /usr/local/bin/docker-compose
+```
+```
+# Hapus Node.js dan npm
+sudo apt-get purge -y nodejs npm
+
+# Hapus Yarn
+sudo npm uninstall -g yarn
+```
+```
+sudo apt-get purge -y curl tar wget clang pkg-config libssl-dev jq build-essential git make ncdu unzip zip
+```
+```
+rm -f /path/to/your/cat20.sh
+```
