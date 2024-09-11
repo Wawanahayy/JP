@@ -1,14 +1,13 @@
 ```console
 Update dan Install Docker:
 
-bash
+``` bash
 Copy code
 sudo apt-get update
 sudo apt-get install docker.io -y
 Install Docker Compose:
 ```
-```
-bash
+```bash
 Copy code
 VERSION=$(curl --silent https://api.github.com/repos/docker/compose/releases/latest | grep -Po '"tag_name": "\K.*\d')
 DESTINATION=/usr/local/bin/docker-compose
@@ -16,31 +15,32 @@ sudo curl -L https://github.com/docker/compose/releases/download/${VERSION}/dock
 sudo chmod 755 $DESTINATION
 Install Node.js dan Yarn:
 ```
-bash
+```bash
 Copy code
 sudo apt-get install npm -y
 sudo npm install n -g
 sudo n stable
 sudo npm i -g yarn
+```
 Clone Repository dan Install Dependencies:
 
-bash
+```bash
 Copy code
 git clone https://github.com/CATProtocol/cat-token-box
 cd cat-token-box
 sudo yarn install
 sudo yarn build
+```
 Set Permissions dan Jalankan Docker Compose:
-
-bash
+```bash
 Copy code
 cd ./packages/tracker/
 sudo chmod 777 docker/data
 sudo chmod 777 docker/pgdata
 sudo docker-compose up -d
+```
 Build dan Jalankan Docker Container:
-
-bash
+```bash
 Copy code
 sudo docker build -t tracker:latest .
 sudo docker run -d \
@@ -50,16 +50,18 @@ sudo docker run -d \
     -e RPC_HOST="host.docker.internal" \
     -p 3000:3000 \
     tracker:latest
+```
 Konfigurasi CLI:
-
-bash
+```
 Copy code
 cd packages/cli
 vim config.json
+```
 Isi config.json dengan:
 
 json
 Copy code
+```bash
 {
   "network": "fractal-mainnet",
   "tracker": "http://127.0.0.1:3000",
@@ -71,15 +73,17 @@ Copy code
       "password": "opcatAwesome"
   }
 }
+```
 Create Wallet dan Mint Token:
 
-bash
+```bash
 Copy code
 sudo yarn cli wallet create
 sudo yarn cli mint -i 45ee725c2c5993b3e4d308842d87e973bf1951f5f7a804b21e4dd964ecd12d6b_0 5
 Script untuk Mengulangi Mint Token:
+```
 
-bash
+```bash
 Copy code
 #!/bin/bash
 
