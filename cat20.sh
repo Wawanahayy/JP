@@ -1,15 +1,16 @@
 Crontab_file="/usr/bin/crontab"
+
+# Set font color variables
 Green_font_prefix="\033[32m"
 Red_font_prefix="\033[31m"
-Green_background_prefix="\033[42;37m"
-Red_background_prefix="\033[41;37m"
 Font_color_suffix="\033[0m"
+
+# Display messages
 Info="[${Green_font_prefix}Informasi${Font_color_suffix}]"
 Error="[${Red_font_prefix}Kesalahan${Font_color_suffix}]"
-Tip="[${Green_font_prefix}Perhatian${Font_color_suffix}]"
 
 check_root() {
-    [[ $EUID != 0 ]] && echo -e "${Error} Saat ini bukan akun ROOT (atau tidak memiliki hak ROOT), tidak dapat melanjutkan operasi. Silakan ganti akun ROOT atau gunakan perintah ${Green_background_prefix}sudo su${Font_color_suffix} untuk mendapatkan hak ROOT sementara (mungkin akan diminta memasukkan kata sandi akun saat ini)." && exit 1
+    [[ $EUID != 0 ]] && echo -e "${Error} Saat ini bukan akun ROOT (atau tidak memiliki hak ROOT), tidak dapat melanjutkan operasi. Silakan ganti akun ROOT atau gunakan perintah ${Green_font_prefix}sudo su${Font_color_suffix} untuk mendapatkan hak ROOT sementara (mungkin akan diminta memasukkan kata sandi akun saat ini)." && exit 1
 }
 
 install_env_and_full_node() {
@@ -100,7 +101,7 @@ check_wallet_balance() {
   sudo yarn cli wallet balances
 }
 
-echo && echo -e " ${Red_font_prefix}dusk_network Skrip instalasi otomatis${Font_color_suffix} oleh \033[1;35Translete by TIMPLEXZ\033[0m
+echo && echo -e " ${Red_font_prefix}dusk_network Skrip instalasi otomatis${Font_color_suffix} oleh \033[1;35mTranslete by TIMPLEXZ\033[0m
 Skrip ini sepenuhnya gratis dan open-source, dikembangkan oleh pengguna Twitter ATAU pemilik ${Green_font_prefix}@ouyoung11${Font_color_suffix}.
 =====================================================
 ==               AIRDROP JAWA PRIDE                == 
