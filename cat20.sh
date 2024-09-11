@@ -100,9 +100,12 @@ check_wallet_balance() {
   sudo yarn cli wallet balances
 }
 
-echo && echo -e " ${Red_font_prefix}dusk_network Skrip instalasi otomatis${Font_color_suffix} oleh \033[1;35moooooyoung\033[0m
-Skrip ini sepenuhnya gratis dan open-source, dikembangkan oleh pengguna Twitter ${Green_font_prefix}@ouyoung11${Font_color_suffix}.
- ———————————————————————
+echo && echo -e " ${Red_font_prefix}dusk_network Skrip instalasi otomatis${Font_color_suffix} oleh \033[1;35Translete by TIMPLEXZ\033[0m
+Skrip ini sepenuhnya gratis dan open-source, dikembangkan oleh pengguna Twitter ATAU pemilik ${Green_font_prefix}@ouyoung11${Font_color_suffix}.
+echo "====================================================="
+echo "                 AIRDROP JAWA PRIDE                  "
+echo "====================================================="
+———————————————————————
  ${Green_font_prefix} 1. Instalasi lingkungan dan node penuh ${Font_color_suffix}
  ${Green_font_prefix} 2. Buat dompet ${Font_color_suffix}
  ${Green_font_prefix} 3. Mulai mint cat ${Font_color_suffix}
