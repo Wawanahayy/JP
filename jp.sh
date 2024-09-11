@@ -86,7 +86,7 @@ cek_log_btc_full_node() {
 }
 
 echo && echo -e " ${Red_font_prefix}dusk_network Script Instalasi Satu Klik${Font_color_suffix} by \033[1;35mTimplexz\033[0m
-Skrip ini sepenuhnya gratis dan open-source, dikembangkan oleh pengguna Twitter ${Green_font_prefix}@ouyoung11${Font_color_suffix},
+Skrip ini sepenuhnya gratis dan open-source, ${Green_font_prefix}TIMPLEXZ${Font_color_suffix},
 Silakan follow, jika ada yang mencoba meminta bayaran, itu penipuan.
  ———————————————————————
  ${Green_font_prefix} 1. Instal Lingkungan Full Node Bitcoin ${Font_color_suffix}
