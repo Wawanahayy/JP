@@ -114,7 +114,7 @@ Skrip ini sepenuhnya gratis dan open-source, dikembangkan oleh pengguna Twitter 
  ${Green_font_prefix} 5. Cek saldo dompet ${Font_color_suffix}
  ———————————————————————" && echo
 
-read -e -p " Silakan masukkan nomor sesuai langkah di atas: " num
+read -p "Silakan masukkan nomor sesuai langkah di atas: " num
 case "$num" in
 1)
     install_env_and_full_node
