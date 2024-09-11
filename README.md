@@ -14,7 +14,7 @@ chmod +x cat20.sh
 ```bash
 sudo bash cat20.sh
 ```
-install and create wallet save your pharse
+# install and create wallet save your pharse
 
 # after create wallet
 ```bash
