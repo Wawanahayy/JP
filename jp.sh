@@ -85,7 +85,7 @@ cek_log_btc_full_node() {
     tail -f $max_disk_path/btc-data/debug.log
 }
 
-echo && echo -e " ${Red_font_prefix}dusk_network Script Instalasi Satu Klik${Font_color_suffix} by \033[1;35moooooyoung\033[0m
+echo && echo -e " ${Red_font_prefix}dusk_network Script Instalasi Satu Klik${Font_color_suffix} by \033[1;35mTimplexz\033[0m
 Skrip ini sepenuhnya gratis dan open-source, dikembangkan oleh pengguna Twitter ${Green_font_prefix}@ouyoung11${Font_color_suffix},
 Silakan follow, jika ada yang mencoba meminta bayaran, itu penipuan.
  ———————————————————————
