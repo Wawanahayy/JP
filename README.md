@@ -37,7 +37,7 @@ back to and run 3
 sudo bash cat20.sh
 ```
 
-create new session
+# create new session if you need
 ```bash
 screen -S cat20
 ```
