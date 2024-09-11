@@ -58,8 +58,6 @@ rm -f ~/cat-token-box/packages/cli/config.json
 ```
 ```
 sudo apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli containerd.io
-
-# Hapus Docker Compose
 sudo rm /usr/local/bin/docker-compose
 ```
 ```
