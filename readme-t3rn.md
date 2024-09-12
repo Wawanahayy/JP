@@ -1,3 +1,6 @@
+#...bash
+sudo systemctl stop executor.service
+
 Menghentikan Service
 ...bash
 sudo systemctl stop executor.service
