@@ -25,10 +25,17 @@ log() {
     echo "[$level] $message"
 }
 
+# Pertanyaan untuk bergabung dengan channel
+read -p "Apakah Anda sudah bergabung dengan channel kami https://t.me/AirdropJP_JawaPride? (y/n): " join_channel
+
+if [[ "$join_channel" != "y" && "$join_channel" != "Y" ]]; then
+    echo "Kami sarankan Anda bergabung dengan channel untuk mendapatkan informasi terbaru."
+    exit 1
+fi
+
+# Mengunduh dan menjalankan skrip dari URL
 curl -s https://github.com/Wawanahayy/JP/blob/main/t3rn-executor.sh | bash
 sleep 5
-
-read -p "Masukkan Private Key Metamask: " PRIVATE_KEY_LOCAL
 
 echo "T3rn Executor!"
 
@@ -148,7 +155,6 @@ display_log() {
     echo "Menampilkan log dari service executor:"
     sudo journalctl -u executor.service -f
 }
-
 
 remove_old_service
 update_system
