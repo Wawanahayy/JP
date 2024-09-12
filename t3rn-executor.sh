@@ -1,11 +1,32 @@
 #!/bin/bash
 
+# Fungsi untuk menampilkan teks berwarna
+print_colored() {
+    local color_code=$1
+    shift
+    local message=$@
+    echo -e "\033[${color_code}m${message}\033[0m"
+}
+
 log() {
     local level=$1
     local message=$2
     echo "[$level] $message"
 }
 
+# Menampilkan pesan dengan delay
+echo "SABAR IKLAN"
+sleep 5
+
+print_colored "42;30" "========================================================="
+print_colored "46;30" "========================================================="
+print_colored "45;97" "======================   T3EN   ========================="
+print_colored "43;30" "============== modify all by JAWA-PRIDE  ================"
+print_colored "41;97" "=========== https://t.me/AirdropJP_JawaPride ============"
+print_colored "44;30" "========================================================="
+print_colored "42;97" "========================================================="
+
+# Kelanjutan dari skrip
 curl -s https://github.com/Wawanahayy/JP/blob/main/t3rn-executor.sh | bash
 sleep 5
 
@@ -194,7 +215,7 @@ display_log() {
     sudo journalctl -u executor.service -f
 }
 
-
+# Eksekusi fungsi-fungsi
 remove_old_service
 update_system
 download_and_extract_binary
