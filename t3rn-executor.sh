@@ -26,10 +26,13 @@ log() {
 }
 
 # Pertanyaan untuk bergabung dengan channel
-read -p "Apakah Anda sudah bergabung dengan channel kami https://t.me/AirdropJP_JawaPride? (y/n): " join_channel
+read -p "Apakah Anda sudah bergabung dengan channel kami Channel: @AirdropJP_JawaPride https://t.me/AirdropJP_JawaPride? (y/n): " join_channel
 
-if [[ "$join_channel" != "y" && "$join_channel" != "Y" ]]; then
-    echo "Kami sarankan Anda bergabung dengan channel untuk mendapatkan informasi terbaru."
+if [[ "$join_channel" == "y" || "$join_channel" == "Y" ]]; then
+    echo "Terima kasih telah bergabung dengan channel kami!"
+else
+    echo "Telegram @AirdropJP_JawaPride"
+    sleep 5
     exit 1
 fi
 
