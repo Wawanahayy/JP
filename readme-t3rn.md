@@ -1,8 +1,8 @@
-
 Menghentikan Service
 ...bash
 sudo systemctl stop executor.service
 ```
+
 Menghapus Service
 
 ```bash
