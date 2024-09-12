@@ -1,10 +1,5 @@
-#...bash
-sudo systemctl stop executor.service
+# t3rn-executor.sh
 
-Menghentikan Service
-...bash
-sudo systemctl stop executor.service
-```
 
 Menghapus Service
 
