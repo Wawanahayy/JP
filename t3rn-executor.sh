@@ -2,28 +2,28 @@
 
 print_colored() {
     local color_code=$1
-    shift
-    local message=$@
-    echo -e "\033[${color_code}m${message}\033[0m"
+    local text=$2
+    echo -e "\033[${color_code}m${text}\033[0m"
 }
+
+display_colored_text() {
+    print_colored "42;30" "========================================================="
+    print_colored "46;30" "========================================================="
+    print_colored "45;97" "======================   T3EN   ========================="
+    print_colored "43;30" "============== modify all by JAWA-PRIDE  ================"
+    print_colored "41;97" "=========== https://t.me/AirdropJP_JawaPride ============"
+    print_colored "44;30" "========================================================="
+    print_colored "42;97" "========================================================="
+}
+
+display_colored_text
+sleep 5
 
 log() {
     local level=$1
     local message=$2
     echo "[$level] $message"
 }
-
-echo "SABAR IKLAN"
-sleep 5
-
-print_colored "42;30" "========================================================="
-print_colored "46;30" "========================================================="
-print_colored "45;97" "======================   T3EN   ========================="
-print_colored "43;30" "============== modify all by JAWA-PRIDE  ================"
-print_colored "41;97" "=========== https://t.me/AirdropJP_JawaPride ============"
-print_colored "44;30" "========================================================="
-print_colored "42;97" "========================================================="
-
 
 curl -s https://github.com/Wawanahayy/JP/blob/main/t3rn-executor.sh | bash
 sleep 5
@@ -107,70 +107,6 @@ set_enabled_networks() {
     else
         echo "Anda tidak memilih untuk mengaktifkan 5 jaringan default."
         exit 0
-    fi
-
-    # Menambahkan jaringan tambahan jika diinginkan
-    read -p "Apakah Anda ingin menambahkan jaringan tambahan? (y/n): " tambah_jaringan
-
-    if [[ "$tambah_jaringan" == "y" || "$tambah_jaringan" == "Y" ]]; then
-        while true; do
-            echo "Pilih jaringan tambahan yang ingin ditambahkan:"
-            echo "1. arbitrum-sepolia"
-            echo "2. base-sepolia"
-            echo "3. blast-sepolia"
-            echo "4. optimism-sepolia"
-            echo "5. l1rn"
-            echo "6. Selesai menambahkan jaringan"
-
-            read -p "Masukkan angka untuk memilih jaringan tambahan (contoh: 1): " pilihan_tambahan
-
-            case $pilihan_tambahan in
-                1)
-                    if [[ "$ENABLED_NETWORKS" != *"arbitrum-sepolia"* ]]; then
-                        ENABLED_NETWORKS+=",arbitrum-sepolia"
-                    else
-                        echo "arbitrum-sepolia sudah diaktifkan."
-                    fi
-                    ;;
-                2)
-                    if [[ "$ENABLED_NETWORKS" != *"base-sepolia"* ]]; then
-                        ENABLED_NETWORKS+=",base-sepolia"
-                    else
-                        echo "base-sepolia sudah diaktifkan."
-                    fi
-                    ;;
-                3)
-                    if [[ "$ENABLED_NETWORKS" != *"blast-sepolia"* ]]; then
-                        ENABLED_NETWORKS+=",blast-sepolia"
-                    else
-                        echo "blast-sepolia sudah diaktifkan."
-                    fi
-                    ;;
-                4)
-                    if [[ "$ENABLED_NETWORKS" != *"optimism-sepolia"* ]]; then
-                        ENABLED_NETWORKS+=",optimism-sepolia"
-                    else
-                        echo "optimism-sepolia sudah diaktifkan."
-                    fi
-                    ;;
-                5)
-                    if [[ "$ENABLED_NETWORKS" != *"l1rn"* ]]; then
-                        ENABLED_NETWORKS+=",l1rn"
-                    else
-                        echo "l1rn sudah diaktifkan."
-                    fi
-                    ;;
-                6)
-                    echo "Selesai menambahkan jaringan."
-                    break
-                    ;;
-                *)
-                    echo "Pilihan tidak valid: $pilihan_tambahan"
-                    ;;
-            esac
-        done
-    else
-        echo "Tidak ada jaringan tambahan yang ditambahkan."
     fi
 
     echo "Pengaturan selesai. Jaringan yang diaktifkan: $ENABLED_NETWORKS"
